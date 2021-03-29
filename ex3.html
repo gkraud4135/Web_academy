@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- 사진이 맵을 사용함 = 맵을만듦 = 그것을 누르면 이동함-->
+<img src="images/kids.jpg" alt="kids" alt="" usemap="#fav">
+<map name="fav">
+    <area shape="rect" coords="10,10,160,200" href="https://www.daum.net/" target="_blank">
+    <area shape="rect" coords="220,10,380,200" href="https://www.daum.net/" target="_blank">
+</map>
+
+<!-- 입력상자 -->
+<form action="#" method="post">
+    <fieldset> <!--테두리를 만든다-->
+        <legend>로그인 정보</legend>
+    <ul>
+        <li>    
+            <label for="user_id">아이디</label>             <!--처음 여기로 이동-->
+            <input type="text" id="user_id" maxlength="12" autofocus required>
+        </li>                                                           <!--필수입력-->
+        <li>    
+            <label for="user_pass">패스워드</label>
+            <input type="password" id="user_pass" placeholder="12자 이하로 입력하세요" maxlength="12" required>
+        </li>
+        <li>
+            <label for="user_add">주소</label> 
+            <input type="text" id="user_addd" >
+        </li>
+        <li>   
+            <label for="user_age">나이</label>
+            <input type="number" id="user_age">
+        </li>
+        <li>
+            <select name="학과" id="major"> <!--드롭다운 선택-->
+                <optgroup label="공과대학">
+                <option value="1">컴퓨터공학과</option>
+                <option value="2" selected>전자공학과</option> <!--select 디폴트-->
+                <option value="3">기계공학과</option>
+                <option value="4">재료공학과</option>
+                </optgroup>
+                <optgroup label="인문대학">          <!--optgroup으로 묶어 서브제목-->
+                <option value="a" selected>국어국문과</option>
+                <option value="b">영어영문과</option>
+                <option value="c">중어중문과</option>
+                <option value="d">독어독문과</option>
+                </optgroup>
+            </select>
+        </li>
+        <br>
+        <input type="text" id="interest" list="subject_list">
+        <datalist id="subject_list"><!---->
+            <option value="grammer" label="문법"></option>
+            <option value="speaking" label="회화"></option>
+            <option value="listening" label="리스닝"></option>
+        </datalist>
+        <textarea name="description" cols=10 rows=20> <!--텍스트 입력칸-->
+        <br>
+        <label>10초남음</label>
+        <progress max="60"></progress>
+        <label>점유율 0.8</label>
+        <meter value="0.8"></meter>
+        <br>
+        <label>사용량</label>
+        <meter value="60" min="0" max="100"></meter>
+        </textarea>
+        <br>
+        <li>   
+            <label for="user_cnt">주문개수</label><!-- 읽기만 됨-->
+            <input type="number" id="user_cnt" readonly>
+        </li>
+        <li>   
+            <label for="user_cnt2">주문개수2</label>
+            <input type="range" id="user_cnt2" min="1" max="5" value="3"> <!--범위 min max value 디폴트-->
+        </li>
+    </ul>
+    </fieldset>
+    <fieldset><!--radio 택1, check 중복-->
+        <legend>신청과목</legend>          <!-- radio subject로 통일해서 그중 선택-->
+        <p>이 달의 신청할 과목을 선택하세요.(택1)</p>
+        <label><input type="radio" name="subject" value="C"></label>
+        <label><input type="radio" name="subject" value="C++"></label>
+        <label><input type="radio" name="subject" value="JAVA"></label>
+    </fieldset>
+    <fieldset><!--radio 택1, check 중복-->
+        <legend>신청과목</legend>          <!--name을 다르게해서 -->
+        <p>이 달의 신청할 과목을 선택하세요.(2과목 이상)</p>
+        <label><input type="checkbox" name="subject1" value="C"></label>
+        <label><input type="checkbox" name="subject2" value="C++"></label>
+        <label><input type="checkbox" name="subject3" value="JAVA"></label>
+    </fieldset>
+    <fieldset>
+        <legend>날짜</legend>
+        <p>시작</p>
+        <label><input type="date" id="sdate"></label>
+        <label><input type="time" id="stime"></label>
+        <p>종료</p>
+        <label><input type="date" id="edate"></label>
+        <label><input type="time" id="etime"></label>
+    </fieldset>
+<br>
+
+<input type="submit" value="확인">
+
+
+</form>
+ 
+</body>
+</html>
