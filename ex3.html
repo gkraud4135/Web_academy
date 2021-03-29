@@ -52,22 +52,27 @@
             </select>
         </li>
         <br>
-        <input type="text" id="interest" list="subject_list">
-        <datalist id="subject_list"><!---->
-            <option value="grammer" label="문법"></option>
-            <option value="speaking" label="회화"></option>
-            <option value="listening" label="리스닝"></option>
-        </datalist>
-        <textarea name="description" cols=10 rows=20> <!--텍스트 입력칸-->
-        <br>
-        <label>10초남음</label>
-        <progress max="60"></progress>
-        <label>점유율 0.8</label>
-        <meter value="0.8"></meter>
-        <br>
-        <label>사용량</label>
-        <meter value="60" min="0" max="100"></meter>
-        </textarea>
+        <li>
+            <br>
+            <input type="text" id="interest" list="subject_list">
+            <datalist id="subject_list">
+                <option value="grammar" label="문법"></option>
+                <option value="speaking" label="회화"></option>
+                <option value="listening" label="리스팅"></option>
+            </datalist>
+            <br>
+            <textarea name="decription" rows=10 cols=50 ></textarea>
+
+            <br>
+            <label>10초 남음</label>
+            <progress max="60" ></progress>
+            <br>
+            <label>점유율 0.8</label>
+            <meter value="0.8"></meter>
+            <br>
+            <label>사용량</label>
+            <meter value="60" min=0 max=100></meter>
+            
         <br>
         <li>   
             <label for="user_cnt">주문개수</label><!-- 읽기만 됨-->
