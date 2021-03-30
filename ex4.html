@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script> src="prefixfree.min.js"</script>
+    <style>
+        /*링크*/
+    @import url('https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap');
+    *{font-family: 'Kiwi Maru', serif;}
+
+    @font-face { /*다운*/
+        font-family: "KiwiMaru-Regular";
+        src: local("KiwiMaru-Regular"),
+        url("KiwiMaru-Regular.ttf") format("truetype");
+    }
+        h1{background: yellow;}
+        #container{
+            text-align: center;
+            width: 700px;
+            margin: 0px 5px;
+            padding: 5px;
+        }
+        img{/*이미지 전체를 변경*/
+            width: 600px;
+        }
+        .accent{
+            color: greenyellow;
+            font-size: 1.5em; /*1.5배         px 크기고정, em배율*/
+            padding: 10px;
+            font-weight: bold; /*굵게*/
+            text-align: center;/*가운데 정렬*/
+            background: crimson;
+        }
+        h1, h2{
+            padding: 1px;
+        }
+        .box{
+            border:2px solid green;
+            width: 100px;
+            height: 100px;
+            position: absolute;/*위치 고정*/
+            left: 50px; top: 70px;
+            
+        }
+        .box:hover{/*마우스를 */
+            /* -webkit-transform: rotate(15deg);
+            -moz-transform: rotate(15deg);
+            -o-transform: rotate(15deg);
+            -ms-transform: rotate(15deg); */
+            transform: rotate(15deg);
+        }
+        
+        .menu_list ul li{
+            display: inline; /*한줄로 none으로 하면 안보임 */
+            border: 1px solid blue; /*테두리 1개 모두 2개 위아래 오왼 4개 위오아왼*/
+            margin: 30px;
+            font-weight: bold;
+            padding: 3px;
+            border-radius: 10px; /*모서리 라운드 처리*/
+            box-shadow: 2px -2px 5px 0px black;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div id="container"><!--특정부분-->
+        <img src="images/dog.jfif" alt="강아지" id="dog" usemap="#move">
+        <map name="move">
+            <area shape="circle" coords="220,10,380,200" href="https://www.daum.net/" alt="noname" target="_self">
+        </map>
+        <div id="check">
+            <h1>확인하세요</h1>
+            <h2>입양정보</h2>
+            <p>Lorem ipsum dolor <span class="accent">sit</span> <b>amet</b> consectetur adipisicing elit. Deleniti nam, corrupti repudiandae quos at, magnam maxime laborum blanditiis, perspiciatis consequuntur ea libero soluta. Ipsa consectetur explicabo magni fuga dolorem delectus.</p>
+            <hr>
+            <h2>고객센터</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nam, corrupti repudiandae quos at, magnam maxime laborum blanditiis, perspiciatis consequuntur ea libero soluta. Ipsa consectetur explicabo magni fuga dolorem delectus.</p>
+            <hr><h2>교환 및 환불</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nam, corrupti repudiandae quos at, magnam maxime laborum blanditiis, perspiciatis consequuntur ea libero soluta. Ipsa consectetur explicabo magni fuga dolorem delectus.</p>
+        </div>
+    </div>
+    <div class="box">
+        Mouse Over
+
+
+    </div>
+    <div class="menu_list">
+        <ul>
+            <li>애완견종류</li>
+            <li>입양하기</li>
+            <li>건강관리</li>
+        </ul>
+    </div>
+
+
+    
+</body>
+</html>
