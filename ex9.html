@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* .box1{
+            width: 100px;
+            background-color: green;
+            margin-left: 10px;
+            padding: 20px;
+            float: left;
+        }
+        .box2{
+            position: relative;
+            left: -50px;
+            top: 30px;
+
+            width: 100px;
+            background-color: greenyellow;
+            margin-left: 10px;
+            padding: 20px;
+            float: left;
+        } */
+        #wrap{
+        position:relative;
+        width: 300px;
+        height: 300px;
+        border: 1px solid gray;
+        }
+        
+        .box{
+            position: absolute;
+            width:50px;
+            height:50px;
+            background-color: indigo;
+        }
+      
+        #crd1{/*왼쪽 상단*/
+            top:0; left: 0;
+            visibility: hidden;
+            }
+        #crd2{top:0; right: 0;}/*오른쪽 상단*/
+        #crd3{bottom:0; right: 0;}/*오른쪽 아래 하단*/
+        #crd4{bottom:0; left: 0;}/*왼쪽 아래 하단*/
+        #crd5{top:100px; left: 100px;}/*정 가운데*/
+
+        #fixbox{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: fixed;
+            top: 0px;
+            right: 10px;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <!-- <section>
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+    </section> -->
+
+    <section>
+        <div id="wrap">
+        <div class="box" id="crd1">box1</div>
+        <div class="box" id="crd2">box2</div>
+        <div class="box" id="crd3">box3</div>
+        <div class="box" id="crd4">box4</div>
+        <div class="box" id="crd5">box5</div>
+        </div>
+    
+    
+    </section>
+    <div id="fixbox">fixbox</div>
+
+</body>
+</html>

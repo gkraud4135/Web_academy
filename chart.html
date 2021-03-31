@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        /*연결 선택자*/             /*그다음 첫째 자식*/
+        section > ul{ 
+            border:1px solid gray;
+        }
+        h2 + li{                        /*+바로옆 형제만 ~ 인접한 형제모두*/
+            border:1px solid red;
+        }
+        /*속성 선택자*/
+        a[href]{background: yellow;}
+
+        a[target="_blank"]{color: tomato;}
+
+        [class ~= "button"]{/*button이 있는*/
+            border: 2px solid green;
+            box-shadow: rgba(0,0,0,4) 5px 5px;}
+
+        a[title |= "cake"]{ /*cake가 포함된 속성*/
+
+            color: violet;
+        }
+        /*여러 글자도 가능*/
+        a[title ^="c"]{ /*c로 시작하는 모든 속성*/
+            font-weight: bold;
+        }
+        a[title $="m"]{/*m으로 끝나는 속성*/
+            background: turquoise;
+        }
+        a[title *="ca"]{/*특정 글자가 일부인*/
+            font-style: italic;
+        }
+        a:link{
+            text-decoration: none;
+        }
+        a:hover{ /*댔을때*/
+            background-color: coral;
+        }
+
+        input:disabled{
+            background: #ddd;
+            border: 1px #ccc solid;
+        }
+        input:checked+span{
+            color: blue;
+        }
+        /*앞에서부터 n번째 자식 nth-child(3)*/
+        /*odd 2n+1, even 2n+0*/
+        table{
+            width: 200px;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        table tr:nth-child(odd){/*홀수*/
+            background: darkblue;
+            color: white;
+        }
+        table tr:nth-child(even){/*짝수*/
+            background: skyblue;
+            color: darkred;
+        }
+        /* table tr:first-child(odd){} */
+
+        li.hot::after{
+            content: "New!!";/*내용에 덧 붙인다*/
+            font-size: x-small;
+            padding: 2px 4px;
+            margin: 0 10px;
+            border-radius: 2px;
+            background: #f00;
+            color: #fff;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section>
+        <h1>스타벅스메뉴</h1>
+        <ul>
+        <h2>커피와 음료</h2>
+        <li>커피
+            <ul>
+            
+                <li><a href="#">에스프레소</a></li>
+                <li><a href="#" target="_blank">라떼</a></li>
+                <li><a href="#">프라프치노</a></li>
+            </ul>
+        </li>
+        <li>차
+            <ul>
+            
+                <li class="button">페퍼민트</a></li>
+                <li class="button-flat">레몬그라스</a></li>
+                <li>히비스커스</a></li>
+                <li>루이보스</a></li>
+            </ul>
+        </li>
+        <h2>음식</h2>
+        <li>케이크
+            <ul>
+            
+                <li><a title="cake">티라미슈</a></li>
+                <li><a title="cake-1">딸기</a></li>
+                <li><a title="cream">오렌지</a></li>
+            </ul>
+        </li>
+        <li>샌드위치
+            <ul>
+            
+                <li>에그샌드위치</a></li>
+                <li>샌드위치</a></li>
+                <li>베이컨</a></li>
+            </ul>
+        </li>
+        </ul>
+
+
+
+    </section>
+    <section>
+        <p>이 달의 신청할 과목을 선택하세요.(택1)</p>
+        <label><input type="radio" name="subject" value="speaking">말하기</label>
+        <label><input type="radio" name="subject" value="listening">듣기</label>
+        <label><input type="radio" name="subject" value="writting">쓰기</label>
+    </section>
+    <table>
+        <tr><td>토마토</td></tr>
+        <tr><td>배추</td></tr>
+        <tr><td>상추</td></tr>
+        <tr><td>가지</td></tr>
+        <tr><td>버섯</td></tr>
+        <tr><td>오이</td></tr>
+        <tr><td>당근</td></tr>
+        <tr><td>귀리</td></tr>
+
+    </table>
+    <section>
+        <ul>
+            <li class="hot">에그샌드위치</a></li>
+            <li>샌드위치</a></li>
+            <li class="hot">베이컨</a></li>
+        </ul>
+    </section>
+
+</body>
+</html>
