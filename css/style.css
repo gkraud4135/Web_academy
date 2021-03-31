@@ -1,0 +1,21 @@
+*{margin: 0;
+padding: 0;}/*전체에 적용*/
+p{text-align: center;}
+ul{ /*순서없는 목록에 스타일 적용*/ 
+    list-style-type: none;
+}
+label.title{
+    font-weight: bold;
+    width: 80px;
+}
+fieldset legend{
+    color:purple;
+    font-size: 18px;
+}
+fieldset{
+    margin: 15px 10px; /*위아래 15, 오른쪽왼쪽 10*/
+    margin: 1px 2px 3px 4px; /*위 오른쪽 아래 왼쪽*/
+}
+
+
+/*span<div<id<class<tag*/
