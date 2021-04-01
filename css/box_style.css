@@ -59,13 +59,6 @@ section{
     margin-left: auto;
     padding: 10px;
 }
-article h3{
-    background-image: url(images/bg.png);
-    background-repeat: none;
-    background-position: left center;
-    padding-left: 30px;
-    overflow: hidden;
-}
 #pet1{
     
     border: 2px solid green;
