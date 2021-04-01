@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        div[class ^="box"]{
+            border: 1px solid black;
+            width: 200px;
+            height: 100px;
+            color: white;
+            font-weight: bold;
+            margin: 40px;
+            perspective: 300px;
+            
+        }
+    section{
+        display: flex;
+        
+    }
+
+    .ex1:hover{/*x좌표로 20px이동*/
+        transform: translateX(20px);
+    }
+
+    .ex2:hover{
+        transform: translateX(20px);
+    }
+    .ex3:hover{
+        transform: translate(20px , 20px);
+    }
+    .ex4:hover{
+        transform: scale(2);
+    }
+    .ex5:hover{
+        transform: scaleY(1.2);
+    }
+    .ex6:hover{
+        transform: scale(0.7);
+    }
+    .ex7:hover{
+        transform: rotate(20deg);
+    }
+    .ex8:hover{
+        transform: rotate(-40deg);
+    }
+    .ex9:hover{
+        transform: rotate3D(2.5,1.2,1.5,45deg);
+    }
+    .ex10:hover{
+        transform: skewX(30deg);
+    }
+    .ex11:hover{
+        transform: skewX(-30deg);
+    }
+    .ex12:hover{
+        transform: skewY(30deg);
+    }
+    .coon{ 
+        transform: rotateZ(10deg);
+    }
+    .ex13 .coon{/*오른쪽 아래 기준으로 10deg기울어져있음*/
+        transform-origin: right bottom;
+    }
+    .ex13:hover{
+        transform:rotate(50deg);
+    }
+
+    div{
+        width: 200px;
+        height: 100px;
+    }
+    .container{
+        border: 1px solid black;
+        perspective: 100px;
+        margin: 40px;
+    }
+    .box1{
+        background: blue;
+        transform: rotateX(45deg);
+        
+    }
+    .box2{
+        background: skyblue;
+        transform: rotateY(45deg);
+        transform-origin: left top;
+    }
+    #style1{ /*자식요소의 3d변환을 사용x 디폴트*/
+        transform-style: flat;
+    }
+    #style2{  /*자식요소의 3D 변환 사용*/
+        transform-style: preserve-3d;
+    }
+
+
+
+
+    </style>
+</head>
+<body>
+
+
+    <section>
+        <div class="box3">
+            <div class="ex1"><img src="images/coon.jfif" width="140px" height="100px"></div>
+        </div>
+        <div class="box3">
+            <div class="ex2"><img src="images/coon.jfif" width="140px" height="100px"></div>
+        </div>
+        <div class="box3">
+            <div class="ex3"><img src="images/coon.jfif" width="140px" height="100px"></div>
+        </div>
+
+
+    </section>
+    <section>
+    <div class="box3">
+        <div class="ex4"><img src="images/coon.jfif" width="140px" height="100px"></div>
+    </div>
+    <div class="box3">
+        <div class="ex5"><img src="images/coon.jfif" width="140px" height="100px"></div>
+    </div>
+    <div class="box3">
+        <div class="ex6"><img src="images/coon.jfif" width="140px" height="100px"></div>
+    </div>
+    </section>
+    <section>
+    <div class="box3">
+        <div class="ex7"><img src="images/coon.jfif" width="140px" height="100px"></div>
+    </div>
+    <div class="box3">
+        <div class="ex8"><img src="images/coon.jfif" width="140px" height="100px"></div>
+    </div>
+    <div class="box3">
+        <div class="ex9"><img src="images/coon.jfif" width="140px" height="100px"></div>
+    </div>
+    </section>
+    <section>
+        <div class="box3">
+            <div class="ex10"><img src="images/coon.jfif" width="140px" height="100px"></div>
+        </div>
+        <div class="box3">
+            <div class="ex11"><img src="images/coon.jfif" width="140px" height="100px"></div>
+        </div>
+        <div class="box3">
+            <div class="ex12"><img src="images/coon.jfif" width="140px" height="100px"></div>
+        </div>
+    </section>
+    <section>
+        <div class="box3">
+            <div class="ex13"><img src="images/coon.jfif" width="140px" height="100px" class="coon"></div>
+        </div>
+        <div class="container">
+            <div class="box1" id="style1">
+                <div class="box2"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="box1" id="style2">
+                <div class="box2"></div>
+            </div>
+        </div>
+
+
+    </section>
+
+</body>
+</html>
