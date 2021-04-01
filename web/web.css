@@ -1,0 +1,278 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+
+}
+section{
+    box-sizing:border-box;
+}
+#container{
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+.info-icon{
+    background: black;
+    width: 100%;
+    height: 30px;
+    order: 1;
+    text-align: center;
+    padding-top: 2px;
+}
+.info-icon ul li{
+    display: inline;
+
+
+}
+.info-icon ul li a{
+    padding: 5px;
+}
+.logo{
+    padding-top: 10px;
+}
+header{
+    background: yellow;
+    width: 100%;
+    height: 60px;
+    order: 2;
+    padding-top: 5px;
+    text-align: center;
+}
+nav ul li{
+    display: inline;
+}
+
+.slider_section{
+    background: rgb(43, 121, 167);
+    width: 100%;
+    height: 200px;
+    order: 3;
+    font-weight: bold;
+    padding-top: 60px;
+    text-align: center;
+}
+.latedst_post_section{
+    order: 6;
+    background: green;
+    width: 100%;
+    height: 200px;
+}
+.popular_post_section{
+    order: 7;
+    background: hotpink;
+    width: 100%;
+    height: 200px;
+}
+.gallery_section{
+    order: 4;
+    background: indigo;
+    width: 100%;
+    height: 200px;
+
+}
+.rankup_section{
+    order: 5;
+    background: darkorange;
+    width: 100%;
+    height: 200px;
+}
+.banner_section{
+    order: 8;
+    background: grey;
+    width: 100%;
+    height: 200px;
+}
+footer{
+    background: black;
+    width: 100%;
+    height: 50px;
+    order: 9;
+}
+
+
+/*테블릿*/
+@media screen and (min-width:768px){
+    *{
+        margin: 0 auto;
+        padding: 0;
+    
+    }
+    section{
+        box-sizing:border-box;
+    }
+    #container{
+        width: 98%;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .info-icon{
+        background: black;
+        width: 100%;
+        height: 30px;
+        order: 1;
+        text-align: right;
+        padding-top: 2px;
+    }
+    .info-icon ul li{
+        display: inline;
+    
+    
+    }
+    .info-icon ul li a{
+        padding: 5px;
+    }
+    .logo{
+        padding-top: 10px;
+    }
+    header{
+        background: yellow;
+        width: 100%;
+        height: 60px;
+        order: 2;
+        display: flex;
+        padding-top: 5px;
+    }
+    nav ul li{
+        display: inline;
+    }
+    
+    .slider_section{
+        background: rgb(43, 121, 167);
+        width: 50%;
+        height: 200px;
+        order: 3;
+        font-weight: bold;
+        padding-top: 60px;
+        text-align: center;
+    }
+    .latedst_post_section{
+        order: 6;
+        background: green;
+        width: 50%;
+        height: 200px;
+    }
+    .popular_post_section{
+        order: 7;
+        background: hotpink;
+        width: 50%;
+        height: 200px;
+    }
+    .gallery_section{
+        order: 4;
+        background: indigo;
+        width: 50%;
+        height: 200px;
+    
+    }
+    .rankup_section{
+        order: 5;
+        background: darkorange;
+        width: 50%;
+        height: 200px;
+    }
+    .banner_section{
+        order: 8;
+        background: grey;
+        width: 50%;
+        height: 200px;
+    }
+    footer{
+        background: black;
+        width: 100%;
+        height: 50px;
+        order: 9;
+    }
+
+}
+/*pc*/
+@media screen and (min-width:992px){
+    *{
+        margin: 0 auto;
+        padding: 0;
+    }
+    section{
+        box-sizing:border-box;
+    }
+    #container{
+        width: 98%;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .info-icon{
+        background: black;
+        width: 100%;
+        height: 30px;
+        order: 1;
+        text-align: left;
+        padding-top: 2px;
+    }
+    .info-icon ul li{
+        display: inline;
+
+    
+    }
+    .info-icon ul li a{
+        padding: 5px;
+    }
+    .logo{
+        padding-top: 10px;
+    }
+    header{
+        background: yellow;
+        width: 100%;
+        height: 60px;
+        order: 2;
+        display: flex;
+    }
+    nav ul li{
+        display: inline;
+    }
+    
+    .slider_section{
+        background: rgb(43, 121, 167);
+        width: 33%;
+        height: 200px;
+        order: 3;
+        font-weight: bold;
+        padding-top: 60px;
+        text-align: center;
+    }
+    .latedst_post_section{
+        order: 6;
+        background: green;
+        width: 33%;
+        height: 200px;
+    }
+    .popular_post_section{
+        order: 7;
+        background: hotpink;
+        width: 34%;
+        height: 200px;
+    }
+    .gallery_section{
+        order: 4;
+        background: indigo;
+        width: 34%;
+        height: 200px;
+    
+    }
+    .rankup_section{
+        order: 5;
+        background: darkorange;
+        width: 33%;
+        height: 200px;
+    }
+    .banner_section{
+        order: 8;
+        background: grey;
+        width: 33%;
+        height: 200px;
+    }
+    footer{
+        background: black;
+        width: 100%;
+        height: 50px;
+        order: 9;
+    }
+
+}
