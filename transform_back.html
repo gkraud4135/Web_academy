@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script> src="prefixfree.min.js"</script>
+    <style>
+
+        div{
+            width: 200px;
+            height: 200px;
+        }
+        .container{
+            border: 1px solid black;
+            perspective: 300px;
+            margin-top: 100px;
+            margin-left: 100px;
+            float:left;
+            margin-bottom: 10px;
+        }
+        .box{
+            background-color: skyblue;
+            transform: rotateY(135deg);
+        }
+        #back1{
+            backface-visibility: hidden;
+        }
+        #back2{
+            backface-visibility: visible;
+        }
+        
+
+        #ex1{
+            width: 100px;
+            height: 100px;
+            background-color: violet;
+            border: 1px solid black;
+            transition-property: width,height,background-color,transform;
+            transition-duration: 2s, 1s, 2s, 1s ;
+            /* transition-timing-function: 2s; */
+        }
+        #ex1:hover{
+            width: 200px;
+            height: 150px;
+            background-color: red;
+            transform: rotateY(180deg);
+            transition-timing-function: ease-out;
+        }
+        #out{
+            clear: both;
+            position: relative;
+            width: 500px;
+            height: 200px;
+            margin: 0 auto;
+            border: 1px solid black;
+            border-radius: 30px;
+            padding: 20px;
+        }
+        .box1{
+            position: relative;
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+            background-color: wheat;
+            border: 1px solid black;
+            border-radius: 30px;
+        }
+        
+
+        #no-delay{
+            transition-duration: 3s;
+            
+        }
+        #delay{
+            transition-duration: 3s;
+            transition-delay: 1s;
+        }
+        #out:hover .box1{
+            transform:rotate(720deg);
+            margin-left: 450px;
+        }
+
+        .bbox{
+            margin-top: 10px;
+            background-color: sandybrown;
+            width: 200px;
+            height: 200px;
+            animation-duration: 2s;
+            animation-name: change-shape;
+        }
+        /* @-webkit-keyframes change-shape{}  */
+        @keyframes change-shape{
+            from{
+                background-color: sandybrown;
+                border: 1px solid black;
+            }
+            to{
+                background-color: red;
+                border-radius: 50%;
+
+            }
+        }
+
+        .bbox2{
+            margin-top: 10px;
+            width: 200px;
+            height: 200px;
+            background-color: slategray;
+            animation-duration: 5s;
+            animation-name: circle;
+            border-radius: 40%;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+
+        }
+        
+        .bbox1{
+            margin-top: 10px;
+            width: 200px;
+            height: 200px;
+            background-color: slategray;
+            animation-duration: 5s;
+            animation-name: circle;
+            border-radius: 40%;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes circle{
+            from{
+                background-color: slategray;
+                border-radius: 40%;
+            }
+            50%{
+                background-color: black;
+                border-radius: 40%;
+                width: 200px;
+                height: 200px;
+                transform: rotate(360deg);
+                margin-left: 0px;
+            }
+            to{
+                background-color: black;
+                border-radius: 40%;
+                width: 30px;
+                height: 30px;
+                margin-left: 400px;
+                transform: rotate(720deg);
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <section>
+
+        <div class="container">
+            <div class="box" id="back1">
+                <h1>BACK</h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="box" id="back2">
+                <h1>BACK</h1>
+            </div>
+        </div>
+        <div class="container">
+            <div class="box2" id="ex1"></div>
+        </div>
+        <div id="out">
+            <div id="no-delay" class="box1"><p>no-delay</p></div>
+            <div id="delay" class="box1"><p>delay</p></div>
+        </div>
+        
+
+        <div class="bbox"></div>
+        <div class="bbox2"></div>
+        <div class="bbox1"></div>
+    </section>
+
+</body>
+</html>
